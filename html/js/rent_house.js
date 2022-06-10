@@ -10,10 +10,23 @@ function rent_house(){
     // let LIMIT = 35                             // 期間
     // let START_YEAR = 2025                      // 年
     // let START_AGE = 35                         // 年齢
-    rent_house_cr(35,2025,35,100000,15000,15000,70000,5)
+
+    let LIMIT = parseInt(document.getElementById("limit").value);
+    let START_YEAR = parseInt(document.getElementById("start_year").value);
+    let START_AGE = parseInt(document.getElementById("start_age").value);
+    let RENT_MONTH = parseInt(document.getElementById("rent_month").value) * 10000;
+    let PARKING = parseInt(document.getElementById("parking").value) * 10000;
+    let UTILITY_COST = parseFloat(document.getElementById("utility_cost").value) * 10000;
+    let HOJO = parseInt(document.getElementById("hojo").value) * 10000;
+    let HOJO_LIMIT    = parseInt(document.getElementById("hojo_limit").value);
+
+    console.log(LIMIT,START_YEAR,START_AGE,RENT_MONTH,PARKING,UTILITY_COST,HOJO,HOJO_LIMIT)
+    rent_house_cr(LIMIT,START_YEAR,START_AGE,RENT_MONTH,PARKING,UTILITY_COST,HOJO,HOJO_LIMIT)
+    
 }
 
 function rent_house_cr(LIMIT,START_YEAR,START_AGE,RENT_MONTH,PARKING,UTILITY_COST,HOJO,HOJO_LIMIT) {
+
     // basic parameter
     // RENT_MONTH : 家賃(35~39歳、65~85歳)
     // PARKING :  駐車場代（月額）
@@ -51,19 +64,19 @@ function rent_house_cr(LIMIT,START_YEAR,START_AGE,RENT_MONTH,PARKING,UTILITY_COS
         now_age = START_AGE + year
         now_year = START_YEAR + year
         // 家賃計算(40~64歳はRENT_MONTHの1.5倍)
-        if(now_age >=START_AGE + 5 && now_age < 65){
+        if(now_age >= 40 && now_age < 65){
             now_rent = RENT_MONTH * 1.5
         }else{
             now_rent = RENT_MONTH
         }
         // 駐車場計算
-        if(now_age >=START_AGE && now_age < END_AGE){
+        if(now_age >=40 && now_age < 65){
             parking_cost = PARKING
         }else{
             parking_cost = 0
         }
         // 光熱費計算
-        if(now_age >=START_AGE && now_age < 65){
+        if(now_age >=40 && now_age < 65){
             now_utility = UTILITY_COST
         }else{
             now_utility = UTILITY_COST * 0.8
@@ -79,13 +92,16 @@ function rent_house_cr(LIMIT,START_YEAR,START_AGE,RENT_MONTH,PARKING,UTILITY_COS
             if(now_year % 2 == 0 && month + 1 == 12){
                 let koshin = now_rent
     
-            }else{
-                koshin = 0
-                SUM_RENT = SUM_RENT + now_rent
-                SUM_UTILITY = SUM_UTILITY + now_utility
-                SUM_PARKING = SUM_PARKING + parking_cost
-                SUM_KOSHIN = SUM_KOSHIN + koshin
-                SUM_HOJO = SUM_HOJO + rent_hojo
+            }
+            koshin = 0
+            SUM_RENT = SUM_RENT + now_rent
+            SUM_UTILITY = SUM_UTILITY + now_utility
+            SUM_PARKING = SUM_PARKING + parking_cost
+            SUM_KOSHIN = SUM_KOSHIN + koshin
+            SUM_HOJO = SUM_HOJO + rent_hojo
+            // debug用
+            if(month + 1 == 12){
+                
                 console.log(now_year,month+1,now_age,now_rent,now_utility,parking_cost,koshin,rent_hojo)
             }
         }

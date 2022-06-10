@@ -11,35 +11,75 @@
     <script src="js/owned_house.js"></script>
 </head>
 <body>
-    <h1>家賃計算</h1>
+    <h1>賃貸</h1>
     <!-- 期間 -->
-    <select name="" id="">
-        <script>
-            var i;
-            for(i=20; i<70; i++){
-                document.write('<option value="'+i+'">'+i+'</option>');
-            }
-        </script>
-    </select>
-    <!-- 開始年 -->
-    <select name="" id="">
-        <script>
-            var i;
-            for(i=2010; i<2050; i++){
-                document.write('<option value="'+i+'">'+i+'</option>');
-            }
-        </script>
-    </select>    
-    <!-- 家賃 -->
-    <input type="text" name="" id="" min="0" max="100">万円
-    <input type="text" inputmode="numeric" pattern="\d*">
+    <div>
+        <!-- 家賃 -->
+        <p>家賃</p>
+        <input type="text" name="" id="rent_month" min="0" max="100" value="10">万円
+        
+        <!-- 年齢 -->
+        <p>年齢</p>
+        <select name="" id="start_age" value="35">
+            <script>
+                var i;
+                for(i=20; i<70; i++){
+                    document.write('<option value="'+i+'">'+i+'</option>');
+                }
+            </script>
+        </select>
 
-    <!-- 家賃補助 -->
-    <input type="number" name="" id="" max="50">万円
+        <!-- 期間 -->
+        <p>期間</p>
+        <select name="" id="limit" value="35">
+            <script>
+                var i;
+                for(i=20; i<70; i++){
+                    document.write('<option value="'+i+'">'+i+'</option>');
+                }
+            </script>
+        </select>
+
+        <!-- 開始年 -->
+        <p>開始年</p>
+        <select name="" id="start_year" value="2025">
+            <script>
+                var i;
+                for(i=2010; i<2050; i++){
+                    document.write('<option value="'+i+'">'+i+'</option>');
+                }
+            </script>
+        </select>    
+
+        <!-- 家賃補助 -->
+        <p>家賃補助・補助期間</p>
+        <input type="text" name="" id="hojo" min="0" max="100" value="7">万円
+        <select name="" id="hojo_limit" value="5">
+            <script>
+                var i;
+                for(i=0; i<60; i++){
+                    document.write('<option value="'+i+'">'+i+'</option>');
+                }
+            </script>
+        </select>
+
+        <!-- 駐車場 -->
+        <p>駐車場</p>
+        <input type="text" name="" id="parking" min="0" max="100" value="1.5">万円
+
+        <!-- 光熱費 -->
+        <p>光熱費</p>
+        <input type="text" name="" id="utility_cost" min="0" max="100" value="1.5">万円
+        
+        <input type="button" value="rent_house" onclick="rent_house()">
+    </div>
 
 
-    <input type="button" value="rent_house" onclick="rent_house()">
-    <input type="button" value="owned_house" onclick="owned_house()">
+
+    <h1>持ち家</h1>
+    <div>
+        <input type="button" value="owned_house" onclick="owned_house()">
+    </div>
 
 
 </body>
