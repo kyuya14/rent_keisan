@@ -1,13 +1,14 @@
 'use strict';
 
-function rent_house(LIMIT){
+function rent_house(LIMIT,START_YEAR,START_AGE){
 
     // let LIMIT = parseInt(document.getElementById("limit").value);
-    let START_YEAR = parseInt(document.getElementById("start_year").value);
-    let START_AGE = parseInt(document.getElementById("start_age").value);
+    // let START_YEAR = parseInt(document.getElementById("start_year").value);
+    // let START_AGE = parseInt(document.getElementById("start_age").value);
     let RENT_MONTH = parseFloat(document.getElementById("rent_month").value) * 10000;
     let PARKING = parseFloat(document.getElementById("parking").value) * 10000;
-    let UTILITY_COST = parseFloat(document.getElementById("utility_cost").value) * 10000;
+    // let UTILITY_COST = parseFloat(document.getElementById("utility_cost").value) * 10000;
+    let UTILITY_COST = 0;
     let HOJO = parseFloat(document.getElementById("hojo").value) * 10000;
     // let HOJO_LIMIT = parseInt(document.getElementById("hojo_limit").value);
 
@@ -90,21 +91,22 @@ function rent_house_cr(LIMIT,START_YEAR,START_AGE,RENT_MONTH,PARKING,HOJO,HOJO_S
             rent_hojo = 0
         }
 
-        for(let month=0; month<12; month++){
+        for(let month=1; month<=12; month++){
             // 更新料計算(偶数年の12月に更新とする)
-            if(now_year % 2 == 0 && month + 1 == 12){
+            if(now_year % 2 == 0 && month == 12){
                 koshin = now_rent
-    
+            }else{
+                koshin = 0
             }
-            koshin = 0
             SUM_RENT = SUM_RENT + now_rent
             // SUM_UTILITY = SUM_UTILITY + now_utility
             SUM_PARKING = SUM_PARKING + parking_cost
             SUM_KOSHIN = SUM_KOSHIN + koshin
             SUM_HOJO = SUM_HOJO + rent_hojo
-            TOTAL_COST = SUM_RENT + SUM_PARKING + SUM_KOSHIN - SUM_HOJO
+            // TOTAL_COST = SUM_RENT + SUM_PARKING + SUM_KOSHIN - SUM_HOJO
+            TOTAL_COST = TOTAL_COST + now_rent + parking_cost + koshin - rent_hojo
         }
-        
+        // console.log(TOTAL_COST,now_age,now_year,SUM_HOJO,SUM_KOSHIN,SUM_PARKING)
         cost_array.push(TOTAL_COST / 10000)
         year_array.push(now_year)
         old_array.push(now_age)

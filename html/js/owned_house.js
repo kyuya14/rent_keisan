@@ -1,8 +1,7 @@
 'use strict';
 
-function owned_house(LIMIT){
+function owned_house(LIMIT,START_YEAR,START_AGE){
 
-    console.log(LIMIT)
     // let RENT_MONTH = 100000                    // 家賃(35~39歳、65~85歳)
     // let PARKING = 15000                        // 駐車場代（月額）
     // let UTILITY_COST = 15000                   // 光熱費（月額）
@@ -13,13 +12,19 @@ function owned_house(LIMIT){
     // let START_AGE = 35                         // 年齢
 
 
-    // let LIMIT = parseInt(document.getElementById("limit").value);
     let LIMIT_LOAN = parseInt(document.getElementById("limit_loan").value);
-    let START_YEAR = parseInt(document.getElementById("start_year").value);
-    let START_AGE = parseInt(document.getElementById("start_age").value);
+    // let LIMIT = parseInt(document.getElementById("limit").value);
+    // if(num == 0){
+    //     let LIMIT_LOAN = parseInt(document.getElementById("limit_loan").value);
+    // }else {
+    //     let LIMIT_LOAN = 
+    // }
+    // let START_YEAR = parseInt(document.getElementById("start_year").value);
+    // let START_AGE = parseInt(document.getElementById("start_age").value);
     let ATAMAKIN = parseFloat(document.getElementById("atamakin").value) * 10000;
     
-    let UTILITY_COST = parseFloat(document.getElementById("utility_cost").value) * 10000;
+    // let UTILITY_COST = parseFloat(document.getElementById("utility_cost").value) * 10000;
+    let UTILITY_COST = 0;
     let RATE = parseFloat(document.getElementById("rate").value);
     let KOTEISHISAN = parseFloat(document.getElementById("koteishisan").value) * 10000;
     // let SHUZENHI = parseFloat(document.getElementById("shuzenhi").value) * 10000;

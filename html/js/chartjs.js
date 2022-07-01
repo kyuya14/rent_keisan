@@ -1,7 +1,4 @@
-// import rent_house_cr from 'rent_house';
-// import { rent_house } from './rent_house.js';
-
-// import rent_house_cr from 'rent_house';
+// 'use strict';
 
 var data;
 var type;
@@ -9,6 +6,7 @@ var options;
 
 
 var label = 0
+var label_name = ""
 var cost_data = 0
 var cost_data_0 = 0
 var cost_data_1 = 0
@@ -16,6 +14,11 @@ var cost_data_1 = 0
 var myChart;
 let LIMIT_RENT = 0;
 let LIMIT = 0;
+let set_rent_house = [] 
+let set_owned_house = [] 
+
+let START_YEAR;
+let START_AGE;
 
 
 function chart(num){
@@ -33,44 +36,53 @@ function getData(num) {
    type = 'line'
 
    LIMIT = parseInt(document.getElementById("limit").value);
-   LIMIT_RENT = parseInt(document.getElementById("limit_rent").value);
+   LIMIT_LOAN = parseInt(document.getElementById("limit_loan").value);
+//    LIMIT_RENT = parseInt(document.getElementById("limit_rent_age").value) - parseInt(document.getElementById("start_age").value);
+   START_YEAR = parseInt(document.getElementById("start_year").value);
+   START_AGE = parseInt(document.getElementById("start_age").value);
+   set_rent_house = rent_house(LIMIT,START_YEAR,START_AGE)
+   set_owned_house = owned_house(LIMIT,START_YEAR,START_AGE)
    
    // labels
    if(num == 0) {
-       label_name = "# 賃貸"
-       label = rent_house(LIMIT)[0]
-        cost_data = rent_house(LIMIT)[2]
+        label_name = "# 賃貸"
+        label = set_rent_house[0]
+        cost_data = set_rent_house[2]
         backgroundColor =  ['rgba(0,0,255,0.1)',]
         borderColor =  ['rgba(0,0,255,0.1)',]
         
     }else if(num == 1){
         label_name = "# 持ち家"
-        label = owned_house(LIMIT)[0]
-        cost_data = owned_house(LIMIT)[2]
+        label = set_owned_house[0]
+        cost_data = set_owned_house[2]
         backgroundColor =  ['rgba(255, 99, 132, 0.2)',]
         borderColor =  ['rgba(255, 99, 132, 0.2)',]
         borderWidth = 0.2
     }else if(num == 2){
         label_name_0 = "# 賃貸"
         label_name_1 = "# 持ち家"
-        label = rent_house(LIMIT)[0]
+        label = set_rent_house[0]
+        cost_data_0 = set_rent_house[2]
+        cost_data_1 = set_owned_house[2]
         backgroundColor_0 =  ['rgba(0,0,255,0.1)',]
         backgroundColor_1 =  ['rgba(255, 99, 132, 0.2)',]
         borderColor_0 =  ['rgba(0,0,255,0.1)',]
         borderColor_1 =  ['rgba(255, 99, 132, 0.2)',]
-        cost_data_0 = rent_house(LIMIT)[2]
-        cost_data_1 = owned_house(LIMIT)[2]
-    }else if(num == 3){
-        label_name = "# 賃貸 + 持ち家"
-        label = owned_house(LIMIT)[0]
-        // cost_data = rent_house(LIMIT_RENT)[2] + owned_house(LIMIT - LIMIT_RENT)[2]
-        // cost_data_1 = owned_house(LIMIT - LIMIT_RENT)[2]
-        backgroundColor =  ['rgba(255, 99, 132, 0.2)',]
-        borderColor =  ['rgba(255, 99, 132, 0.2)',]
-        borderWidth = 0.2
     }
+    // else if(num == 3){
+    //     label_name = "# 賃貸 + 持ち家"
+    //     label = set_owned_house[0]
+    //     // cost_data_0 = rent_house(LIMIT_RENT)[2] + owned_house(LIMIT - LIMIT_RENT)[2]
+    //     // cost_data_1 = owned_house(LIMIT - LIMIT_RENT)[2]
+    //     // cost_data = rent_house(LIMIT_RENT - START_AGE,START_YEAR,START_AGE)[2] + owned_house(LIMIT - (LIMIT_RENT - START_AGE),START_YEAR + (LIMIT_RENT - START_AGE),LIMIT_RENT)[2]
+    //     // cost_data = rent_house(LIMIT_RENT,START_YEAR,START_AGE)[2] + owned_house(LIMIT - LIMIT_RENT,START_YEAR + LIMIT_RENT,START_AGE + LIMIT_RENT)[2]
+    //     cost_data = owned_house(LIMIT - LIMIT_RENT,START_YEAR + LIMIT_RENT,START_AGE + LIMIT_RENT)[2]
+    //     backgroundColor =  ['rgba(0,0,255,0.1)',]
+    //     borderColor =  ['rgba(0,0,255,0.1)',]
+    //     borderWidth = 0.2
+    // }
     // data
-    if(num == 0 || num == 1){
+    if(num == 0 || num == 1 || num == 3){
         data = {
             labels: label,
             datasets: 
