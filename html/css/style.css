@@ -27,9 +27,9 @@ ul {
 
 }
 
-dt { 
-    margin-left: auto;
-    margin-right: auto;
+hr { 
+    /* margin-left: auto;
+    margin-right: auto; */
 }
 
 .row_1 {
@@ -44,7 +44,7 @@ dt {
 }
 
 div {
-    width: 600px;
+    width: 450px;
     margin-left: auto;
     margin-right: auto;
 }

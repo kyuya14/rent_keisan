@@ -36,7 +36,7 @@
 
                 <p class="row_1">年齢</p>
                 <p class="row_1">
-                    <select class="form-select" style="width:20%" name="" id="start_age" value="35">
+                    <select class="form-select" style="width:70%" name="" id="start_age" value="35">
                         <script>
                             var i;
                             for(i=32; i<70; i++){
@@ -48,7 +48,7 @@
 
                 <p class="row_1">期間</p>
                 <p class="row_1">
-                    <select class="form-select" style="width:20%" name="" id="limit">
+                    <select class="form-select" style="width:70%" name="" id="limit">
                         <script>
                             var i;
                             for(i=50; i<70; i++){
@@ -59,7 +59,7 @@
                 </p>
                 <p class="row_1">開始年</p>
                 <p class="row_1">
-                    <select class="form-select" style="width:20%" name="" id="start_year" value="2025">
+                    <select class="form-select" style="width:70%" name="" id="start_year" value="2025">
                         <script>
                             var i;
                             for(i=2022; i<2050; i++){
@@ -79,7 +79,7 @@
                 
                 <p class="row_1">終了年齢</p>
                 <p class="row_1">
-                    <select class="form-select" style="width:20%" name="" id="hojo_end_age" value="40">
+                    <select class="form-select" style="width:70%" name="" id="hojo_end_age" value="40">
                         <script>
                             var i;
                             for(i=40; i<60; i++){
@@ -107,7 +107,7 @@
                 </p>
                 <p class="row_1">終了年齢</p>
                 <p class="row_1">
-                    <select class="form-select" style="width:20%" name="" id="parking_end_age" value="40">
+                    <select class="form-select" style="width:70%" name="" id="parking_end_age" value="40">
                         <script>
                             var i;
                             for(i=40; i<60; i++){
@@ -136,8 +136,8 @@
 
         <hr>
 
-        <h1 id="motiie">持ち家</h1>
         <div>
+            <h1 id="motiie">持ち家</h1>
             <!-- 住宅費用 -->
             <p class="row_1">住宅費用</p>
             <p class="row_1">
@@ -165,7 +165,7 @@
             <!-- 期間 -->
             <p class="row_1">ローン支払い期間</p>
             <p class="row_1">
-                <select class="form-select" style="width:20%" name="" id="limit_loan" value="35">
+                <select class="form-select" style="width:70%" name="" id="limit_loan" value="35">
                     <script>
                         var i;
                         for(i=35; i<70; i++){
@@ -181,7 +181,7 @@
 
             <p class="row_1">
                 <input class="form-check-input" type="checkbox" id="tochi" name="土地売却">
-                <label for="coding">※最終年に土地を売却する場合はチェックして下さい</label>
+                <label for="coding">※最終年に土地を売却する場合はチェック</label>
             </p>
             
             <!-- 年齢 -->
@@ -220,14 +220,14 @@
         </p>
         </div>
 
-        <div style="width:80%">
-            <canvas id="myChart" width="400" height="400"></canvas>
+        <div>
+            <canvas id="myChart" width="370" height="370" style="margin-left: auto;margin-right: auto;"></canvas>
         </div>
 
         <!-- ※「賃貸＋持ち家」は後ほど実装 -->
         <!-- <h1>賃貸＋持ち家</h1>
         <div>
-            <select class="form-select" style="width:20%" name="" id="limit_rent_age" value="35">
+            <select class="form-select" style="width:70%" name="" id="limit_rent_age" value="35">
                 <script>
                     var i;
                     for(i=40; i<70; i++){
@@ -249,7 +249,7 @@
         </p>
     </div>
     
-    <div style="text-align:center;">
+    <div>
         <script type="text/javascript" src="js/chartjs.js" ></script>
     </div>
     
