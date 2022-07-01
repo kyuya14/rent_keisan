@@ -7,6 +7,11 @@ h1 {
     text-align: center;
     /* text-decoration: underline; */
 }
+h2,ul {
+    text-align: center;
+
+}
+
 a{
     text-decoration: none;
 }

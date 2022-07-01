@@ -31,12 +31,11 @@
         <div>
             <h2>基本情報</h2>
             <!-- 家賃 -->
-            <dl>
-                <dt>家賃</dt>
-                <dd><input type="text" name="" id="rent_month" min="0" max="100" value="10">万円</dd>
+                <p class="row_1">家賃</p>
+                <p class="row_1"><input type="text" name="" id="rent_month" min="0" max="100" value="10">万円</p>
 
-                <dt>年齢</dt>
-                <dd>
+                <p class="row_1">年齢</p>
+                <p class="row_1">
                     <select class="form-select" style="width:20%" name="" id="start_age" value="35">
                         <script>
                             var i;
@@ -45,10 +44,10 @@
                             }
                         </script>
                     </select>
-                </dd>
+                </p>
 
-                <dt>期間</dt>
-                <dd>
+                <p class="row_1">期間</p>
+                <p class="row_1">
                     <select class="form-select" style="width:20%" name="" id="limit">
                         <script>
                             var i;
@@ -57,9 +56,9 @@
                             }
                         </script>
                     </select>
-                </dd>
-                <dt>開始年</dt>
-                <dd>
+                </p>
+                <p class="row_1">開始年</p>
+                <p class="row_1">
                     <select class="form-select" style="width:20%" name="" id="start_year" value="2025">
                         <script>
                             var i;
@@ -68,18 +67,18 @@
                             }
                         </script>
                     </select>   
-                </dd>
+                </p>
             </dl>
 
             <dl>
                 <h2>家賃補助・期間</h2>
-                <dt>家賃補助（月額）</dt>
-                <dd>
+                <p class="row_1">家賃補助（月額）</p>
+                <p class="row_1">
                     <input type="text" name="" id="hojo" min="0" max="100" value="7">万円
-                </dd>
+                </p>
                 
-                <dt>終了年齢</dt>
-                <dd>
+                <p class="row_1">終了年齢</p>
+                <p class="row_1">
                     <select class="form-select" style="width:20%" name="" id="hojo_end_age" value="40">
                         <script>
                             var i;
@@ -88,13 +87,13 @@
                             }
                             </script>
                     </select>歳
-                </dd>
+                </p>
                 
             </dl>
             <dl> 
                 <h2>駐車場</h2>
-                <dt>駐車場料金（月額）</dt>
-                <dd>
+                <p class="row_1">駐車場料金（月額）</p>
+                <p class="row_1">
                     <input type="text" name="" id="parking" min="0" max="100" value="1.5">万円
                     <!-- 開始年齢
                     <select name="" id="parking_start_age" value="">
@@ -105,9 +104,9 @@
                             }
                         </script>
                     </select>歳 -->
-                </dd>
-                <dt>終了年齢</dt>
-                <dd>
+                </p>
+                <p class="row_1">終了年齢</p>
+                <p class="row_1">
                     <select class="form-select" style="width:20%" name="" id="parking_end_age" value="40">
                         <script>
                             var i;
@@ -117,7 +116,7 @@
                             </script>
                     </select>
                     歳
-                </dd>
+                </p>
             </dl>
 
 
@@ -127,7 +126,9 @@
             <input type="text" name="" id="utility_cost" min="0" max="100" value="0">万円 -->
 
             <div>
-                <input class="btn btn-outline-primary" type="button" id="rent_house" value="賃貸計算" onclick="chart(0)">
+                <p>
+                    <input class="btn btn-outline-primary" type="button" id="rent_house" value="賃貸計算" onclick="chart(0)">
+                </p>
             </div>
             
         </div>
@@ -212,7 +213,7 @@
         <hr>
 
         <h1 id="hikaku">家賃と持ち家比較</h1>
-        <div>
+        <p>
             <input class="btn btn-outline-primary" type="button" value="賃貸・持ち家比較" onclick="chart(2)">
         </div>
 
