@@ -31,11 +31,12 @@
         <div>
             <h2>基本情報</h2>
             <!-- 家賃 -->
-                <p class="row_1">家賃</p>
-                <p class="row_1"><input type="text" name="" id="rent_month" min="0" max="100" value="10">万円</p>
+            <p class="row_1">
+                家賃<br>
+                <input type="text" name="" id="rent_month" min="0" max="100" value="10">万円</p>
 
-                <p class="row_1">年齢</p>
                 <p class="row_1">
+                    年齢<br>
                     <select class="form-select" style="width:70%" name="" id="start_age" value="35">
                         <script>
                             var i;
@@ -50,8 +51,8 @@
                     </select>
                 </p>
 
-                <p class="row_1">期間</p>
                 <p class="row_1">
+                    期間
                     <select class="form-select" style="width:70%" name="" id="limit">
                         <script>
                             var i;
@@ -65,8 +66,9 @@
                         </script>
                     </select>
                 </p>
-                <p class="row_1">開始年</p>
+                
                 <p class="row_1">
+                    開始年
                     <select class="form-select" style="width:70%" name="" id="start_year" value="2025">
                         <script>
                             var i;
@@ -86,13 +88,14 @@
 
             <dl>
                 <h2>家賃補助・期間</h2>
-                <p class="row_1">家賃補助（月額）</p>
+                
                 <p class="row_1">
+                    家賃補助（月額）<br>
                     <input type="text" name="" id="hojo" min="0" max="100" value="7">万円
                 </p>
                 
-                <p class="row_1">終了年齢</p>
                 <p class="row_1">
+                    終了年齢
                     <select class="form-select" style="width:70%" name="" id="hojo_end_age" value="40">
                         <script>
                             var i;
@@ -100,14 +103,15 @@
                                 document.write('<option value="'+i+'">'+i+'</option>');
                             }
                             </script>
-                    </select>歳
+                    </select>
                 </p>
                 
             </dl>
             <dl> 
                 <h2>駐車場</h2>
-                <p class="row_1">駐車場料金（月額）</p>
+                
                 <p class="row_1">
+                    駐車場料金（月額）<br>
                     <input type="text" name="" id="parking" min="0" max="100" value="1.5">万円
                     <!-- 開始年齢
                     <select name="" id="parking_start_age" value="">
@@ -119,8 +123,9 @@
                         </script>
                     </select>歳 -->
                 </p>
-                <p class="row_1">終了年齢</p>
+                
                 <p class="row_1">
+                    終了年齢
                     <select class="form-select" style="width:70%" name="" id="parking_end_age" value="40">
                         <script>
                             var i;
@@ -151,34 +156,39 @@
         <hr>
 
         <div>
-            <h1 id="motiie">持ち家</h1>
+            <h1 id="motiie">持ち家（戸建て）</h1>
             <!-- 住宅費用 -->
-            <p class="row_1">住宅費用</p>
+            
             <p class="row_1">
+                住宅費用<br>
                 <input type="text" name="" id="house_cost" value="5000">万円
             </p>
 
             <!-- 頭金 -->
-            <p class="row_1">頭金</p>
+            
             <p class="row_1">
+                頭金<br>
                 <input type="text" name="" id="atamakin" min="0" max="100" value="0">万円
             </p>
 
             <!-- 金利 -->
-            <p class="row_1">金利（全期間固定）</p>
+            
             <p class="row_1">
+                金利（全期間固定）<br>
                 <input type="text" name="" id="rate" value="0.015">
             </p>
 
             <!-- 固定資産税（年間） -->
-            <p class="row_1">固定資産税（年間）</p>
+            
             <p class="row_1">
+                固定資産税（年間）<br>
                 <input type="text" name="" id="koteishisan" value="15">万円
             </p>
 
             <!-- 期間 -->
-            <p class="row_1">ローン支払い期間</p>
+            
             <p class="row_1">
+                ローン支払い期間
                 <select class="form-select" style="width:70%" name="" id="limit_loan" value="35">
                     <script>
                         var i;
