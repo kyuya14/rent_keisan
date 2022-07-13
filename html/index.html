@@ -33,110 +33,103 @@
             <!-- 家賃 -->
             <p class="row_1">
                 家賃<br>
-                <input type="text" name="" id="rent_month" min="0" max="100" value="10">万円</p>
-
-                <p class="row_1">
-                    年齢<br>
-                    <select class="form-select" style="width:70%" name="" id="start_age" value="35">
-                        <script>
-                            var i;
-                            for(i=30; i<70; i++){
-                                if(i == 32){
-                                    document.write('<option value="'+i+'" selected>'+i+'</option>');
-                                }else {
-                                    document.write('<option value="'+i+'">'+i+'</option>');
-                                }
-                            }
-                        </script>
-                    </select>
-                </p>
-
-                <p class="row_1">
-                    期間
-                    <select class="form-select" style="width:70%" name="" id="limit">
-                        <script>
-                            var i;
-                            for(i=30; i<70; i++){
-                                if(i == 35) {
-                                    document.write('<option value="'+i+'" selected>'+i+'</option>');
-                                }else{
-                                    document.write('<option value="'+i+'">'+i+'</option>');
-                                }
-                            }
-                        </script>
-                    </select>
-                </p>
-                
-                <p class="row_1">
-                    開始年
-                    <select class="form-select" style="width:70%" name="" id="start_year" value="2025">
-                        <script>
-                            var i;
-                            var d = new Date();
-                            var year = d.getFullYear(); 
-                            for(i=year-10; i<year + 50; i++){
-                                if(i == year){
-                                    document.write('<option value="'+i+'" selected>'+i+'</option>');
-                                }else{
-                                    document.write('<option value="'+i+'">'+i+'</option>');
-                                }
-                            }
-                        </script>
-                    </select>   
-                </p>
-            </dl>
-
-            <dl>
-                <h2>家賃補助・期間</h2>
-                
-                <p class="row_1">
-                    家賃補助（月額）<br>
-                    <input type="text" name="" id="hojo" min="0" max="100" value="7">万円
-                </p>
-                
-                <p class="row_1">
-                    終了年齢
-                    <select class="form-select" style="width:70%" name="" id="hojo_end_age" value="40">
-                        <script>
-                            var i;
-                            for(i=40; i<60; i++){
+                <input type="text" name="" id="rent_month" min="0" max="100" value="10">万円
+            </p>
+            <p class="row_1">
+                年齢<br>
+                <select class="form-select" style="width:70%" name="" id="start_age" value="35">
+                    <script>
+                        var i;
+                        for(i=30; i<70; i++){
+                            if(i == 32){
+                                document.write('<option value="'+i+'" selected>'+i+'</option>');
+                            }else {
                                 document.write('<option value="'+i+'">'+i+'</option>');
                             }
-                            </script>
-                    </select>
-                </p>
-                
-            </dl>
-            <dl> 
-                <h2>駐車場</h2>
-                
-                <p class="row_1">
-                    駐車場料金（月額）<br>
-                    <input type="text" name="" id="parking" min="0" max="100" value="1.5">万円
-                    <!-- 開始年齢
-                    <select name="" id="parking_start_age" value="">
-                        <script>
-                            var i;
-                            for(i=0; i<60; i++){
+                        }
+                    </script>
+                </select>
+            </p>
+            <p class="row_1">
+                期間
+                <select class="form-select" style="width:70%" name="" id="limit">
+                    <script>
+                        var i;
+                        for(i=30; i<70; i++){
+                            if(i == 35) {
+                                document.write('<option value="'+i+'" selected>'+i+'</option>');
+                            }else{
                                 document.write('<option value="'+i+'">'+i+'</option>');
                             }
+                        }
+                    </script>
+                </select>
+            </p>
+            
+            <p class="row_1">
+                開始年
+                <select class="form-select" style="width:70%" name="" id="start_year" value="2025">
+                    <script>
+                        var i;
+                        var d = new Date();
+                        var year = d.getFullYear(); 
+                        for(i=year-10; i<year + 50; i++){
+                            if(i == year){
+                                document.write('<option value="'+i+'" selected>'+i+'</option>');
+                            }else{
+                                document.write('<option value="'+i+'">'+i+'</option>');
+                            }
+                        }
+                    </script>
+                </select>   
+            </p>
+            <h2>家賃補助・期間</h2>
+            
+            <p class="row_1">
+                家賃補助（月額）<br>
+                <input type="text" name="" id="hojo" min="0" max="100" value="7">万円
+            </p>
+            
+            <p class="row_1">
+                終了年齢
+                <select class="form-select" style="width:70%" name="" id="hojo_end_age" value="40">
+                    <script>
+                        var i;
+                        for(i=40; i<60; i++){
+                            document.write('<option value="'+i+'">'+i+'</option>');
+                        }
                         </script>
-                    </select>歳 -->
-                </p>
-                
-                <p class="row_1">
-                    終了年齢
-                    <select class="form-select" style="width:70%" name="" id="parking_end_age" value="40">
-                        <script>
-                            var i;
-                            for(i=40; i<60; i++){
-                                document.write('<option value="'+i+'">'+i+'</option>');
-                            }
-                            </script>
-                    </select>
-                    歳
-                </p>
-            </dl>
+                </select>
+            </p>
+            
+            <h2>駐車場</h2>
+            
+            <p class="row_1">
+                駐車場料金（月額）<br>
+                <input type="text" name="" id="parking" min="0" max="100" value="1.5">万円
+                <!-- 開始年齢
+                <select name="" id="parking_start_age" value="">
+                    <script>
+                        var i;
+                        for(i=0; i<60; i++){
+                            document.write('<option value="'+i+'">'+i+'</option>');
+                        }
+                    </script>
+                </select>歳 -->
+            </p>
+            
+            <p class="row_1">
+                終了年齢
+                <select class="form-select" style="width:70%" name="" id="parking_end_age" value="40">
+                    <script>
+                        var i;
+                        for(i=40; i<60; i++){
+                            document.write('<option value="'+i+'">'+i+'</option>');
+                        }
+                        </script>
+                </select>
+                歳
+            </p>
 
 
 
@@ -278,4 +271,4 @@
     </div>
     
 </body>
-</html>
+</html> 
