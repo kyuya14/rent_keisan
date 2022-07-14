@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+}
+
+.tintai {
+    background: orange;
+}
+.motiie {
+    background: skyblue;
+}
+.hikaku {
+    background: yellow;
+}

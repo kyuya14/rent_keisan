@@ -63,3 +63,18 @@ h1::after {
 /* p > :nth-child(2n) {
     background-color: blue;
 } */
+
+/* li:empty {
+    background-color: aqua;
+} */
+/* 
+li:not(:empty) {
+    background-color: bisque;
+} */
+
+/* ------------------ */
+/* flexbox */
+/* ------------------ */
+.container {
+    display: flexbox;
+}
