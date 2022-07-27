@@ -1,0 +1,85 @@
+/* common */
+body,h1,p,h2 {
+    margin: 0;
+    /* padding: 0; */
+}
+
+/* ------- */
+img {
+    vertical-align: bottom;
+}
+
+/* header */
+header {
+    background-color: #efefef;
+}
+header img {
+    width: 120px;
+    height: 120px;
+}
+
+header .container {
+    display: flex;
+    margin: 0 auto;
+    /* outline: 2px solid red; */
+    width: 400px;
+    align-items: center;
+    padding: 32px 0;
+}
+header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+header .icon {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+}
+header li + li {
+    margin-left: 10px;
+    /* margin-right: 10px; */
+}
+header .container div + div {
+    margin-left: 32px;
+}
+header .info_icon {
+    border-radius: 50%;
+}
+/* ------- */
+
+/* main */
+main h1 {
+    font-size: 24px;
+    font-weight: normal;
+    text-align: center;
+    padding: 60px 0;
+}
+main .container {
+    width: 400px;
+    margin: 0 auto;
+    /* outline: 2px solid red; */
+}
+main img {
+    width: 300px;
+    height: 300px;
+}
+main h2 {
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: 16px;
+}
+main p {
+    line-height: 1.8;
+    margin-top: 16px;
+}
+main section + section {
+    margin-top: 60px;
+}
+/* ------- */
+
+/* footer */
+
+/* ------- */

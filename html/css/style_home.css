@@ -1,85 +1,81 @@
 /* common */
-body,h1,p,h2 {
-    margin: 0;
-    /* padding: 0; */
+body,h1{
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
 }
-
-/* ------- */
+p {
+    line-height: 1.6;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.btn {
+    display: block;
+    width: 160px;
+    background-color: green;
+    color: #eee;
+    font-weight: bold;
+    border-radius: 4px;
+    padding: 10px 0;
+    text-align: center;
+}
+.container {
+    /* background-color: aqua; */
+    width: calc(100% - 32px);
+    margin: 0 auto;
+    /* border: 2px solid red; */
+}
 img {
     vertical-align: bottom;
 }
 
 /* header */
 header {
-    background-color: #efefef;
+    /* background: #eee; */
+    padding: 16px 0;
 }
-header img {
-    width: 120px;
-    height: 120px;
-}
-
 header .container {
     display: flex;
-    margin: 0 auto;
-    /* outline: 2px solid red; */
-    width: 400px;
+    /* width: 600px; */
+    justify-content: space-between;
     align-items: center;
-    padding: 32px 0;
+    
+
 }
-header ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-header .icon {
-    margin-left: 10px;
-    margin-right: 10px;
-    width: 30px;
-    height: 30px;
-}
-header li + li {
-    margin-left: 10px;
-    /* margin-right: 10px; */
-}
-header .container div + div {
+header img {
+    width: 50px;
+    height: 50px;
+    vertical-align: bottom;
+    margin-right: 32px;
     margin-left: 32px;
 }
-header .info_icon {
-    border-radius: 50%;
-}
-/* ------- */
 
-/* main */
-main h1 {
-    font-size: 24px;
-    font-weight: normal;
+/* hero */
+.hero {
+    background-color: skyblue;
     text-align: center;
-    padding: 60px 0;
 }
-main .container {
-    width: 400px;
-    margin: 0 auto;
-    /* outline: 2px solid red; */
+.hero img {
+    width: 200px;
+    height: 200px;
 }
-main img {
-    width: 300px;
-    height: 300px;
-}
-main h2 {
-    font-size: 20px;
+.hero h1 {
     font-weight: normal;
-    margin-top: 16px;
+    color: #0066CC;
+    padding-top: 16px;
 }
-main p {
-    line-height: 1.8;
-    margin-top: 16px;
+.hero p {
+    margin-top: 64px;
 }
-main section + section {
-    margin-top: 60px;
+.hero .btn {
+    /* margin-top: 64px; */
+    margin: 64px auto 0;
 }
-/* ------- */
+.hero img {
+    margin-top: 64px;
+}
 
-/* footer */
 
-/* ------- */
+
+/* footer*/
