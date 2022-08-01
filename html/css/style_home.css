@@ -65,12 +65,18 @@ header img {
     margin-right: 32px;
     margin-left: 32px;
 }
+header h1,header h2 {
+    color: #444444;
+}
 
 /* hero */
 .hero {
     background-color: #FFF5EE;
     text-align: center;
     height: 450px;
+}
+.hero h1,header h2 {
+    color: #444444;
 }
 .hero img {
     width: 200px;
