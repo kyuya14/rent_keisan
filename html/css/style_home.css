@@ -68,8 +68,9 @@ header img {
 
 /* hero */
 .hero {
-    background-color: skyblue;
+    background-color: #FFF5EE;
     text-align: center;
+    height: 450px;
 }
 .hero img {
     width: 200px;
@@ -171,6 +172,9 @@ header img {
 /* large screen  */
 @media (min-width: 600px) {
 
+    .hero {
+        height: 300px;
+    }
     .hero .container {
         display: flex;
         align-items: center;
