@@ -214,3 +214,24 @@ header h1,header h2 {
     }
 
 }
+
+/* Intersection Observer API */
+
+.animation {
+    opacity: 0;
+    /* transform: translateY(40px); */
+    transition: opacity .8s,transform .8s;
+}
+
+.animation.slide-from-right {
+    transform: translateX(40px);
+}
+
+.animation.slide-from-left {
+    transform: translateX(-40px);
+}
+
+.animation.appear {
+    opacity: 1;
+    transform: none;
+}
