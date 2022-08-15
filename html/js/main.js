@@ -2,7 +2,8 @@
 // Intersection Observer API
 {
     const targets = document.querySelectorAll('.animation');
-    const onScrollTarget = document.getElementById('target')
+    const onScrollTarget = document.getElementById('target');
+    const totop = document.getElementById('to_top')
     // const targets = document.querySelectorAll('section img');
 
     function inViewCallback(entries,obs){
@@ -20,8 +21,10 @@
         entries.forEach(entry => {
             if(!entry.isIntersecting) {
                 header.classList.add('scrolled')
+                totop.classList.add('scrolled')
             } else {
                 header.classList.remove('scrolled')
+                totop.classList.remove('scrolled')
 
             }
         })
@@ -42,5 +45,13 @@
     targets.forEach(target => {
         inViewObserver.observe(target);
     });
+
+    totop.addEventListener('click', event => {
+        event.preventDefault();
+        window.scroll({
+            top:0,
+            behavior:'smooth'
+        })
+    })
 
 }

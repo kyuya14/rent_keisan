@@ -260,3 +260,20 @@ header.scrolled {
     opacity: 1;
     transform: none;
 }
+
+#to_top {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    opacity: 0;
+    transition: opacisty .3s;
+}
+
+#to_top i {
+    font-size: 32px;
+}
+
+#to_top.scrolled {
+    color: #444444;
+    opacity: 1;
+}
