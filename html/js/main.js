@@ -2,11 +2,11 @@
 // Intersection Observer API
 {
     const targets = document.querySelectorAll('.animation');
+    const onScrollTarget = document.getElementById('target')
     // const targets = document.querySelectorAll('section img');
 
-    function callback(entries,obs){
+    function inViewCallback(entries,obs){
 
-        console.log("debug")
         entries.forEach(entry => {
             if(!entry.isIntersecting){
                 return;
@@ -16,14 +16,31 @@
         });
     }
 
+    function onScrollCallback(entries,obs){
+        entries.forEach(entry => {
+            if(!entry.isIntersecting) {
+                header.classList.add('scrolled')
+            } else {
+                header.classList.remove('scrolled')
+
+            }
+        })
+
+    }
+
+    const header = document.querySelector('header')
+
     const options = {
         threshold: 0.5
     }
 
-    const observer = new IntersectionObserver(callback,options);
+    const inViewObserver = new IntersectionObserver(inViewCallback,options);
+
+    const onScrollObserver = new IntersectionObserver(onScrollCallback);
+    onScrollObserver.observe(onScrollTarget);
 
     targets.forEach(target => {
-        observer.observe(target);
+        inViewObserver.observe(target);
     });
 
 }
