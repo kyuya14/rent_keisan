@@ -52,12 +52,8 @@ section.logo {
 section.logo > .container {
     display: flex;
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 20px 20px;
     justify-content: center;
-    /* width: calc(100% - 10px); */
-    /* width: 800px; */
-    /* border:solid */
-    /* padding: 20px 70px; */
 }
 section.logo img {
     width: 120px;
@@ -68,7 +64,7 @@ section.logo > .container > .doc {
     padding: 0 50px;
     color: gray;
 }
+
 section.logo > .container a:hover {
-    /* border: solid; */
     opacity: 0.5;
 }
