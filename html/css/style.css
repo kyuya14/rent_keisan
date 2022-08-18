@@ -1,80 +1,74 @@
-@charset "utf-8";
-
-h1 {
-    color: skyblue;
-    font-size: 48px;
-    line-height: 2;
-    text-align: center;
-    /* text-decoration: underline; */
-}
-h2,ul {
-    text-align: center;
-
+/* common */
+body,h1,p {
+    margin: 0px;
 }
 
-a{
+/* header */
+header {
+    /* padding: 16px 0; */
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: #fff;
+    text-align: right;
+    z-index: 1;
+}
+header div {
+    margin: 0 auto;
+    width: 80%;
+    padding-top: 10px;
+}
+header a {
     text-decoration: none;
+    padding-left: 10px;
+    color: gray;
+}
+header a:hover {
+    opacity: 0.5;
 }
 
-img {
-    vertical-align: middle;
+/* hero */
+section.hero {
+    height: 300px;
+    padding-top: 200px;
 }
-
-ul {
-    /* list-style-type: none;
-    list-style-position: inside; */
-    list-style: none;
-
+section.hero h1 {
+    text-align: center;
+    font-weight: normal;
 }
-
-hr { 
-    /* margin-left: auto;
-    margin-right: auto; */
-}
-
-.row_1 {
-    width: 350px;
-    height: 80px;
-    border: 2px dashed skyblue;
-    border-radius: 10px;
-    padding: 5px 6px;
-    margin-left: auto;
-    margin-right: auto;
+section.hero p {
+    text-align: center;
+    color: silver;
 
 }
 
-div {
-    width: 450px;
-    margin-left: auto;
-    margin-right: auto;
+/* logo */
+section.logo {
+    background-color: #FFFFF0;
+    height: 600px;
 }
-
-[href] {
-    font-weight: bold;
+section.logo > .container {
+    display: flex;
+    margin: 0 auto;
+    padding: 20px 0;
+    justify-content: center;
+    /* width: calc(100% - 10px); */
+    /* width: 800px; */
+    /* border:solid */
+    /* padding: 20px 70px; */
 }
-
-h1::before {
-    content: "- ";    
+section.logo img {
+    width: 120px;
+    height: 120px;
 }
-h1::after {
-    content: " -";    
+section.logo > .container > .doc {
+    width: 200px;
+    padding: 0 50px;
+    color: gray;
 }
-
-/* p > :nth-child(2n) {
-    background-color: blue;
-} */
-
-/* li:empty {
-    background-color: aqua;
-} */
-/* 
-li:not(:empty) {
-    background-color: bisque;
-} */
-
-/* ------------------ */
-/* flexbox */
-/* ------------------ */
-.container {
-    display: flexbox;
+section.logo > .container a:hover {
+    /* border: solid; */
+    opacity: 0.5;
 }
