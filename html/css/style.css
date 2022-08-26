@@ -31,7 +31,7 @@ header a:hover {
 
 /* hero */
 section.hero {
-    height: 300px;
+    height: 500px;
     padding-top: 200px;
 }
 section.hero h1 {
@@ -67,4 +67,19 @@ section.logo > .container > .doc {
 
 section.logo > .container a:hover {
     opacity: 0.5;
+}
+
+.animation {
+    opacity: 0.0;
+    transition: opacity .8s ,transform .8s;
+}
+.animation.slide-from-left {
+    transform: translateX(-40px);
+}
+.animation.slide-from-right {
+    transform: translateX(40px);
+}
+.animation.appear {
+    opacity: 1;
+    transform: none;
 }
