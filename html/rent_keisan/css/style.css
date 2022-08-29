@@ -1,0 +1,85 @@
+/* common */
+body,h1,p {
+    margin: 0px;
+}
+
+/* header */
+header {
+    /* padding: 16px 0; */
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: #fff;
+    text-align: right;
+    z-index: 1;
+}
+header div {
+    margin: 0 auto;
+    width: 80%;
+    padding-top: 10px;
+}
+header a {
+    text-decoration: none;
+    padding-left: 10px;
+    color: gray;
+}
+header a:hover {
+    opacity: 0.5;
+}
+
+/* hero */
+section.hero {
+    height: 500px;
+    padding-top: 200px;
+}
+section.hero h1 {
+    text-align: center;
+    font-weight: normal;
+}
+section.hero p {
+    text-align: center;
+    color: silver;
+
+}
+
+/* logo */
+section.logo {
+    background-color: #FFFFF0;
+    height: 600px;
+}
+section.logo > .container {
+    display: flex;
+    margin: 0 auto;
+    padding: 20px 20px;
+    justify-content: center;
+}
+section.logo img {
+    width: 120px;
+    height: 120px;
+}
+section.logo > .container > .doc {
+    width: 200px;
+    padding: 0 50px;
+    color: gray;
+}
+
+section.logo > .container a:hover {
+    opacity: 0.5;
+}
+
+.animation {
+    opacity: 0.0;
+    transition: opacity .8s ,transform .8s;
+}
+.animation.slide-from-left {
+    transform: translateX(-40px);
+}
+.animation.slide-from-right {
+    transform: translateX(40px);
+}
+.animation.appear {
+    opacity: 1;
+    transform: none;
+}

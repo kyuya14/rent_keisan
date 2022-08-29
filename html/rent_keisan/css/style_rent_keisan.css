@@ -1,0 +1,169 @@
+@charset "utf-8";
+
+h1 {
+    color: skyblue;
+    font-size: 48px;
+    line-height: 2;
+    text-align: center;
+    /* text-decoration: underline; */
+}
+h2,ul {
+    text-align: center;
+
+}
+
+a{
+    text-decoration: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+ul {
+    /* list-style-type: none;
+    list-style-position: inside; */
+    list-style: none;
+
+}
+
+hr { 
+    /* margin-left: auto;
+    margin-right: auto; */
+}
+
+.row_1 {
+    width: 350px;
+    height: 80px;
+    border: 2px dashed skyblue;
+    border-radius: 10px;
+    padding: 5px 6px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+div {
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+[href] {
+    font-weight: bold;
+}
+
+h1::before {
+    content: "- ";    
+}
+h1::after {
+    content: " -";    
+}
+
+/* p > :nth-child(2n) {
+    background-color: blue;
+} */
+
+/* li:empty {
+    background-color: aqua;
+} */
+/* 
+li:not(:empty) {
+    background-color: bisque;
+} */
+
+/* ------------------ */
+/* flexbox */
+/* ------------------ */
+.container {
+    display: flexbox;
+}
+
+
+/* common */
+body,h1,p {
+    margin: 0px;
+}
+
+/* header */
+header {
+    /* padding: 16px 0; */
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: #fff;
+    text-align: right;
+    z-index: 1;
+}
+header div {
+    margin: 0 auto;
+    width: 80%;
+    padding-top: 10px;
+}
+header a {
+    text-decoration: none;
+    padding-left: 10px;
+    color: gray;
+}
+header a:hover {
+    opacity: 0.5;
+}
+
+/* hero
+section.hero {
+    height: 500px;
+    padding-top: 200px;
+}
+section.hero h1 {
+    text-align: center;
+    font-weight: normal;
+}
+section.hero p {
+    text-align: center;
+    color: silver;
+
+} */
+
+/* logo */
+section.logo {
+    background-color: #FFFFF0;
+    height: 700px;
+    padding-top: 100px;
+    width: 100%;
+}
+section.logo > .container {
+    display: flex;
+    margin: 0 auto;
+    padding: 50px 20px;
+    justify-content: center;
+}
+section.logo img {
+    width: 120px;
+    height: 120px;
+}
+section.logo > .container > .doc {
+    width: 200px;
+    padding: 0 50px;
+    color: gray;
+}
+
+section.logo > .container a:hover {
+    opacity: 0.5;
+}
+
+.animation {
+    opacity: 0.0;
+    transition: opacity .8s ,transform .8s;
+}
+.animation.slide-from-left {
+    transform: translateX(-40px);
+}
+.animation.slide-from-right {
+    transform: translateX(40px);
+}
+.animation.appear {
+    opacity: 1;
+    transform: none;
+}
