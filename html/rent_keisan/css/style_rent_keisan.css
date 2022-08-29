@@ -43,11 +43,11 @@ hr {
 
 }
 
-div {
+/* div {
     width: 450px;
     margin-left: auto;
     margin-right: auto;
-}
+} */
 
 [href] {
     font-weight: bold;
@@ -129,7 +129,7 @@ section.hero p {
 /* logo */
 section.logo {
     background-color: #FFFFF0;
-    height: 700px;
+    height: 750px;
     padding-top: 100px;
     width: 100%;
 }
