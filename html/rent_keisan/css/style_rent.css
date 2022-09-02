@@ -1,0 +1,94 @@
+/* common */
+body,h1,p,h2 {
+    margin: 0px;
+    background-color: #FFFFF0;
+}
+
+/* header */
+header {
+    /* padding: 16px 0; */
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: #fff;
+    text-align: right;
+    z-index: 1;
+}
+header div {
+    margin: 0 auto;
+    width: 80%;
+    padding-top: 10px;
+}
+header a {
+    text-decoration: none;
+    padding-left: 10px;
+    color: gray;
+}
+header a:hover {
+    opacity: 0.5;
+}
+
+/* logo */
+section.logo {
+    height: 300px;
+    padding-top: 200px;
+}
+section.logo h1,h2 {
+    text-align: center;
+    font-weight: normal;
+}
+section.logo p {
+    text-align: center;
+    color: silver;
+
+}
+
+section.content {
+    color: orange;
+}
+section h2 {
+    padding-top: 30px;
+}
+section.content img {
+    width: 30px;
+    height: 30px;
+}
+section.content > .container {
+    display: flex;
+
+}
+section.content > .container img {
+    width: 30px;
+    height: 30px;
+}
+section.content > .container .text{
+    width: 60%;
+    padding: 10px 10px;
+    /* background-color: blue; */
+}
+section.content > .container .doc {
+    display: flex;
+    width: 40%;
+    padding: 10px 20px;
+    /* background-color: blue; */
+}
+section.content > .container .text input,select {
+    width: 65%;
+    margin-right: 15px;
+    border: none;
+    border-bottom: solid;
+    border-width:1px;
+    text-align: center;
+    background-color: #fff;
+    font-weight: bold;
+    font-size: large;
+    color: orange;
+}
+
+
+
+/* -------------------------- */
+/* tintai */
+/* -------------------------- */
