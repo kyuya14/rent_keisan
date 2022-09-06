@@ -4,6 +4,10 @@ body,h1,p,h2 {
     background-color: #FFFFF0;
 }
 
+button {
+    margin: 0 auto;
+}
+
 /* header */
 header {
     /* padding: 16px 0; */
@@ -45,8 +49,24 @@ section.logo p {
 
 }
 
-section.content {
+/* motiie */
+section.motiie {
+    color:orange;
+}
+section.motiie > .container .text input,select {
     color: orange;
+}
+/* tintai */
+section.tintai{
+    color:skyblue;
+}
+section.tintai > .container .text input,select {
+    color: skyblue;
+}
+
+/* common */
+section.content {
+    padding-bottom: 20px;
 }
 section h2 {
     padding-top: 30px;
@@ -84,11 +104,9 @@ section.content > .container .text input,select {
     background-color: #fff;
     font-weight: bold;
     font-size: large;
-    color: orange;
+    /* color: orange; */
 }
-
-
-
-/* -------------------------- */
-/* tintai */
-/* -------------------------- */
+section.content > .button_row {
+    width: 100%;
+    text-align: center;
+}
