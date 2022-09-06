@@ -58,10 +58,17 @@ section.motiie > .container .text input,select {
 }
 /* tintai */
 section.tintai{
-    color:skyblue;
+    color: blue;
 }
 section.tintai > .container .text input,select {
-    color: skyblue;
+    color: blue ;
+}
+/* hikaku */
+section.hikaku{
+    color:green;
+}
+section.hikaku > .container .text input,select {
+    color: green;
 }
 
 /* common */

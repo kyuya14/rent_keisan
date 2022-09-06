@@ -47,8 +47,12 @@ function getData(num) {
     if(num == 0) {
         set_rent_house = rent_house(LIMIT,START_YEAR,START_AGE)
     } else if(num == 1) {
-       set_owned_house = owned_house(LIMIT,START_YEAR,START_AGE)
-   }
+        set_owned_house = owned_house(LIMIT,START_YEAR,START_AGE)
+    } else {
+        set_rent_house = rent_house(LIMIT,START_YEAR,START_AGE)
+        set_owned_house = owned_house(LIMIT,START_YEAR,START_AGE)
+        
+    }
    
    // labels
    if(num == 0) {
