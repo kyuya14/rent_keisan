@@ -34,18 +34,21 @@ function getData(num) {
     */
    // type
    type = 'line'
-
-   LIMIT = parseInt(document.getElementById("limit").value);
    if (num == 0) {
-       LIMIT_LOAN = 0   
+       LIMIT_LOAN = 0
    } else {
        LIMIT_LOAN = parseInt(document.getElementById("limit_loan").value);
    }
-//    LIMIT_RENT = parseInt(document.getElementById("limit_rent_age").value) - parseInt(document.getElementById("start_age").value);
-   START_YEAR = parseInt(document.getElementById("start_year").value);
-   START_AGE = parseInt(document.getElementById("start_age").value);
-   set_rent_house = rent_house(LIMIT,START_YEAR,START_AGE)
-   set_owned_house = owned_house(LIMIT,START_YEAR,START_AGE)
+
+    LIMIT = parseInt(document.getElementById("limit").value);
+    START_YEAR = parseInt(document.getElementById("start_year").value);
+    START_AGE = parseInt(document.getElementById("start_age").value);
+    //    LIMIT_RENT = parseInt(document.getElementById("limit_rent_age").value) - parseInt(document.getElementById("start_age").value);
+    if(num == 0) {
+        set_rent_house = rent_house(LIMIT,START_YEAR,START_AGE)
+    } else if(num == 1) {
+       set_owned_house = owned_house(LIMIT,START_YEAR,START_AGE)
+   }
    
    // labels
    if(num == 0) {
