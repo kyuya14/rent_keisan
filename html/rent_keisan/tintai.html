@@ -19,7 +19,7 @@
     <!-- header erea -->
     <header>
         <div>
-            <a href="rent_keisan_index.html">賃貸・持ち家シミュレーション</a>
+            <a href="rent_keisan_index.html">Simulation</a>
             <a href="#">menu2</a>
             <a href="#">menu3</a>
         </div>
@@ -37,7 +37,7 @@
         <div class="container">
             <div class="doc">
                 <p>想定家賃</p>
-                <a href="#"  data-bs-toggle="modal" data-bs-target="#staticBackdrop_1">
+                <a href="#"  data-bs-toggle="modal" data-bs-target="#SB_rent_month">
                     <img src="../img/help.png" alt="">
                 </a>
             </div>
@@ -48,7 +48,7 @@
         <div class="container">
             <div class="doc">
                 <p>開始年齢</p>
-                <a href="#"  data-bs-toggle="modal" data-bs-target="#staticBackdrop_2">
+                <a href="#"  data-bs-toggle="modal" data-bs-target="#SB_start_age">
                     <img src="../img/help.png" alt="">
                 </a>
             </div>
@@ -59,7 +59,7 @@
         <div class="container">
             <div class="doc">
                 <p>開始年　</p>
-                <a href="#"  data-bs-toggle="modal" data-bs-target="#staticBackdrop_3">
+                <a href="#"  data-bs-toggle="modal" data-bs-target="#SB_start_year">
                     <img src="../img/help.png" alt="">
                 </a>
             </div>
@@ -70,7 +70,7 @@
         <div class="container">
             <div class="doc">
                 <p>計算期間</p>
-                <a href="#"  data-bs-toggle="modal" data-bs-target="#staticBackdrop_4">
+                <a href="#"  data-bs-toggle="modal" data-bs-target="#SB_limit">
                     <img src="../img/help.png" alt="">
                 </a>
             </div>
@@ -83,7 +83,7 @@
         <div class="container">
             <div class="doc">
                 <p>家賃補助</p>
-                <a href="#"  data-bs-toggle="modal" data-bs-target="#staticBackdrop_5">
+                <a href="#"  data-bs-toggle="modal" data-bs-target="#SB_hojo">
                     <img src="../img/help.png" alt="">
                 </a>
             </div>
@@ -94,7 +94,7 @@
         <div class="container">
             <div class="doc">
                 <p>家賃補助<br>終了年齢</p>
-                <a href="#"  data-bs-toggle="modal" data-bs-target="#staticBackdrop_6">
+                <a href="#"  data-bs-toggle="modal" data-bs-target="#SB_hojo_end_age">
                     <img src="../img/help.png" alt="">
                 </a>
             </div>
@@ -107,7 +107,7 @@
         <div class="container">
             <div class="doc">
                 <p>駐車場料<br>金</p>
-                <a href="#"  data-bs-toggle="modal" data-bs-target="#staticBackdrop_7">
+                <a href="#"  data-bs-toggle="modal" data-bs-target="#SB_parking">
                     <img src="../img/help.png" alt="">
                 </a>
             </div>
@@ -118,7 +118,7 @@
         <div class="container">
             <div class="doc">
                 <p>駐車料金<br>終了年齢</p>
-                <a href="#"  data-bs-toggle="modal" data-bs-target="#staticBackdrop_8">
+                <a href="#"  data-bs-toggle="modal" data-bs-target="#SB_parking_end_age">
                     <img src="../img/help.png" alt="">
                 </a>
             </div>
@@ -149,7 +149,7 @@
     
     <!-- Modal -->
     <!-- 想定家賃 -->
-    <div class="modal fade" id="staticBackdrop_1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal fade" id="SB_rent_month" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -159,7 +159,7 @@
                 <div class="modal-body">
                     <p>想定の家賃を記載入力します。</p>
                     <p>35～65歳の期間は家族が増えることを想定し、「家賃 = 想定家賃 * 1.5」で計算します。</p>
-                    <p>65歳以降は入力した想定家賃で計算します。</p>
+                    <p>35歳未満、65歳以降は入力した想定家賃で計算します。</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -168,7 +168,7 @@
         </div> 
     </div>
     <!-- 開始年齢 -->
-    <div class="modal fade" id="staticBackdrop_2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal fade" id="SB_start_age" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -185,7 +185,7 @@
         </div> 
     </div>
     <!-- 開始年 -->
-    <div class="modal fade" id="staticBackdrop_3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal fade" id="SB_start_year" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -202,7 +202,7 @@
         </div> 
     </div>
     <!-- 計算期間 -->
-    <div class="modal fade" id="staticBackdrop_4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal fade" id="SB_limit" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -220,7 +220,7 @@
     </div>
 
     <!-- 家賃補助 -->
-    <div class="modal fade" id="staticBackdrop_5" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal fade" id="SB_hojo" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -238,7 +238,7 @@
         </div> 
     </div>
     <!-- 家賃補助終了年齢 -->
-    <div class="modal fade" id="staticBackdrop_6" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal fade" id="SB_hojo_end_age" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -256,7 +256,7 @@
     </div>
 
     <!-- 駐車場料金 -->
-    <div class="modal fade" id="staticBackdrop_7" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal fade" id="SB_parking" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -274,11 +274,11 @@
         </div> 
     </div>
     <!-- 駐車料金終了年齢 -->
-    <div class="modal fade" id="staticBackdrop_8" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal fade" id="SB_parking_end_age" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">駐車場料金</h5>
+                    <h5 class="modal-title" id="staticBackdropLabel">駐車料金終了年齢</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">

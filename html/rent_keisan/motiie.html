@@ -19,7 +19,7 @@
     <!-- header erea -->
     <header>
         <div>
-            <a href="rent_keisan_index.html">賃貸・持ち家シミュレーション</a>
+            <a href="rent_keisan_index.html">Simulation</a>
             <a href="#">menu2</a>
             <a href="#">menu3</a>
         </div>
@@ -37,7 +37,7 @@
         <div class="container">
             <div class="doc">
                 <p>住宅費用</p>
-                <a href="#"  data-bs-toggle="modal" data-bs-target="#staticBackdrop_1">
+                <a href="#"  data-bs-toggle="modal" data-bs-target="#SB_house_cost">
                     <img src="../img/help.png" alt="">
                 </a>
             </div>
@@ -48,7 +48,7 @@
         <div class="container">
             <div class="doc">
                 <p>開始年齢</p>
-                <a href="#"  data-bs-toggle="modal" data-bs-target="#staticBackdrop_2">
+                <a href="#"  data-bs-toggle="modal" data-bs-target="#SB_start_age">
                     <img src="../img/help.png" alt="">
                 </a>
             </div>
@@ -59,7 +59,7 @@
         <div class="container">
             <div class="doc">
                 <p>開始年　</p>
-                <a href="#"  data-bs-toggle="modal" data-bs-target="#staticBackdrop_3">
+                <a href="#"  data-bs-toggle="modal" data-bs-target="#SB_start_year">
                     <img src="../img/help.png" alt="">
                 </a>
             </div>
@@ -70,7 +70,7 @@
         <div class="container">
             <div class="doc">
                 <p>計算期間</p>
-                <a href="#"  data-bs-toggle="modal" data-bs-target="#staticBackdrop_4">
+                <a href="#"  data-bs-toggle="modal" data-bs-target="#SB_limit">
                     <img src="../img/help.png" alt="">
                 </a>
             </div>
@@ -83,7 +83,7 @@
         <div class="container">
             <div class="doc">
                 <p>頭金　　</p>
-                <a href="#"  data-bs-toggle="modal" data-bs-target="#staticBackdrop_2">
+                <a href="#"  data-bs-toggle="modal" data-bs-target="#SB_atamakin">
                     <img src="../img/help.png" alt="">
                 </a>
             </div>
@@ -94,7 +94,7 @@
         <div class="container">
             <div class="doc">
                 <p>金利　　</p>
-                <a href="#"  data-bs-toggle="modal" data-bs-target="#staticBackdrop_3">
+                <a href="#"  data-bs-toggle="modal" data-bs-target="#SB_rate">
                     <img src="../img/help.png" alt="">
                 </a>
             </div>
@@ -105,7 +105,7 @@
         <div class="container">
             <div class="doc">
                 <p>固定資産<br>税</p>
-                <a href="#"  data-bs-toggle="modal" data-bs-target="#staticBackdrop_4">
+                <a href="#"  data-bs-toggle="modal" data-bs-target="#SB_koteishisan">
                     <img src="../img/help.png" alt="">
                 </a>
             </div>
@@ -116,7 +116,7 @@
         <div class="container">
             <div class="doc">
                 <p>ローン支払<br>期間</p>
-                <a href="#"  data-bs-toggle="modal" data-bs-target="#staticBackdrop_5">
+                <a href="#"  data-bs-toggle="modal" data-bs-target="#SB_limit_loan">
                     <img src="../img/help.png" alt="">
                 </a>
             </div>
@@ -129,7 +129,7 @@
         <div class="container">
             <div class="doc">
                 <p>土地売却</p>
-                <a href="#"  data-bs-toggle="modal" data-bs-target="#staticBackdrop_6">
+                <a href="#"  data-bs-toggle="modal" data-bs-target="#SB_tochi">
                     <img src="../img/help.png" alt="">
                 </a>
             </div>
@@ -164,18 +164,17 @@
     </button> -->
     
     <!-- Modal -->
-    <!-- 想定家賃 -->
-    <div class="modal fade" id="staticBackdrop_1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <!-- 住宅費用 -->
+    <div class="modal fade" id="SB_house_cost" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">想定家賃</h5>
+                    <h5 class="modal-title" id="staticBackdropLabel">住宅費用</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p>想定の家賃を記載入力します。</p>
-                    <p>35～65歳は家族が増えることを加味して想定家賃の1.5倍で計算します。</p>
-                    <p>65歳以降は入力した想定家賃で計算します。</p>
+                    <p>住宅の費用を入力します。</p>
+                    <p>諸経費（登記費・手数料など）は含まず、住宅のみの費用を入力してください。</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -184,7 +183,7 @@
         </div> 
     </div>
     <!-- 開始年齢 -->
-    <div class="modal fade" id="staticBackdrop_2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal fade" id="SB_start_age" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -201,7 +200,7 @@
         </div> 
     </div>
     <!-- 開始年 -->
-    <div class="modal fade" id="staticBackdrop_3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal fade" id="SB_start_year" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -218,7 +217,7 @@
         </div> 
     </div>
     <!-- 計算期間 -->
-    <div class="modal fade" id="staticBackdrop_4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal fade" id="SB_limit" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -235,17 +234,16 @@
         </div> 
     </div>
 
-    <!-- 家賃補助 -->
-    <div class="modal fade" id="staticBackdrop_5" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <!-- 頭金 -->
+    <div class="modal fade" id="SB_atamakin" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">家賃補助</h5>
+                    <h5 class="modal-title" id="staticBackdropLabel">頭金</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p>家賃補助がある場合、家賃補助の金額（月額）を入力します。</p>
-                    <p>家賃補助がない場合は「0」を入力します。</p>
+                    <p>頭金を入力します。</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -253,16 +251,17 @@
             </div>
         </div> 
     </div>
-    <!-- 家賃補助終了年齢 -->
-    <div class="modal fade" id="staticBackdrop_6" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <!-- 金利 -->
+    <div class="modal fade" id="SB_rate" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">家賃補助終了年齢</h5>
+                    <h5 class="modal-title" id="staticBackdropLabel">金利</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p>家賃補助が終了する年齢を入力します。</p>
+                    <p>想定の金利を入力します。</p>
+                    <p>全期間固定金利で計算します。変動金利の場合、金利変動を考慮して入力してください。</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -270,18 +269,18 @@
             </div>
         </div> 
     </div>
-
-    <!-- 駐車場料金 -->
-    <div class="modal fade" id="staticBackdrop_7" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    
+    <!-- 固定資産税 -->
+    <div class="modal fade" id="SB_koteishisan" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">駐車場料金</h5>
+                    <h5 class="modal-title" id="staticBackdropLabel">固定資産税</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p>月極駐車場を利用している場合、駐車場料料金（月額）を入力します。</p>
-                    <p>駐車場を利用していない場合は「0」を入力します。</p>
+                    <p>想定する固定資産税（年額）を入力します。</p>
+                    <p>全期間固定の金額で計算します。</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -289,16 +288,34 @@
             </div>
         </div> 
     </div>
-    <!-- 駐車料金終了年齢 -->
-    <div class="modal fade" id="staticBackdrop_8" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <!-- ローン支払い期間 -->
+    <div class="modal fade" id="SB_limit_loan" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">駐車場料金</h5>
+                    <h5 class="modal-title" id="staticBackdropLabel">ローン支払期間</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p>月極駐車場の利用が終了する年齢を入力します。</p>
+                    <p>ローンの支払い期間を入力します。</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div> 
+    </div>
+    <!-- 土地売却 -->
+    <div class="modal fade" id="SB_tochi" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">土地売却</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>最終年に土地を売却する場合、チェックを入れてください。</p>
+                    <p>土地価格は「(住宅費用 - 建物費用(2,400万))*0.8」で計算します。</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
