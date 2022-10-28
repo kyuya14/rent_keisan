@@ -5,11 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style_home.css">
     <title>TRUE MONEY</title>
 </head>
 <body>
     <header>
+    <!-- <header class="scrolled"> -->
         <div class="container">
             <a href="">
                 <h1><img src="img/self_info.png" alt="自己紹介">Self Introduction</h1>
@@ -19,6 +21,8 @@
         
         
     </header>
+
+    <div id="target"></div>
     
     <section class="hero">
         <div class="container">
@@ -28,8 +32,8 @@
                 <!-- <a href="#" class="btn">ダウンロード</a> -->
             </div>
             <div class="pic">
-                <a href="index.html#tintai">
-                    <img src="img/tintai.png" alt="">
+                <a href="rent_keisan.html#tintai">
+                    <img class="animation slide-from-under" src="img/tintai.png" alt="">
                 </a>
             </div>
         </div>
@@ -38,27 +42,27 @@
     <section class="features">
         <h1>機能</h1>
         <div class="container">
-            <section>
+            <section class="animation slide-from-right">
                 <div class="pic">
-                    <a href="index.html#tintai">
-                        <img src="img/tintai.png" alt="">
+                    <a href="rent_keisan.html#tintai">
+                        <img class="" src="img/tintai.png" alt="">
                     </a>
                 </div>
                 <div class="desc">
-                    <a href="index.html#tintai">
+                    <a href="rent_keisan.html#tintai">
                         <h2>賃貸計算</h2>
                         <p>賃貸の合計金額を計算します</p>
                     </a>
                 </div>
             </section>
-            <section>
+            <section class="animation slide-from-left">
                 <div class="pic">
-                    <a href="index.html#motiie">
-                        <img src="img/motiie.png" alt="">
+                    <a href="rent_keisan.html#motiie">
+                        <img class="animation slide-from-left" src="img/motiie.png" alt="">
                     </a>
                 </div>
                 <div class="desc">
-                    <a href="index.html#motiie">
+                    <a href="rent_keisan.html#motiie">
                         <h2>持ち家計算</h2>
                         <p>持ち家の合計金額を計算します</p>
                         <!-- <p>すごい特徴です。すごい特徴です。すごい特徴です。すごい特徴です。すごい特徴です。すごい特徴です。すごい特徴です。すごい特徴です。</p>
@@ -67,14 +71,14 @@
                     </a>
                 </div>
             </section>
-            <section>
+            <section class="animation slide-from-right">
                 <div class="pic">
-                    <a href="index.html#hikaku">
-                        <img src="img/hikaku.png" alt="">
+                    <a href="rent_keisan.html#hikaku">
+                        <img class="animation slide-from-right" src="img/hikaku.png" alt="">
                     </a>
                 </div>
                 <div class="desc">
-                    <a href="index.html#hikaku">
+                    <a href="rent_keisan.html#hikaku">
                         <h2>賃貸・持ち家比較</h2>
                         <p>賃貸と持ち家の合計金額を比較します。</p>
                         <p>将来的にどちらの費用が高いかがわかります。</p>
@@ -87,21 +91,21 @@
     <section class="voices">
         <h1>ユーザーの声</h1>
         <div class="container">
-            <section>                
+            <section class="animation slide-from-under">                
                 <p>素晴らしいアプリですね。素晴らしいアプリですね。</p>
                 <footer>
                     <img src="img/self_info.png" alt="">
                     <p>会社員（32）</p>
                 </footer>
             </section>
-            <section>                
+            <section class="animation slide-from-under delay">                
                 <p>素晴らしいアプリですね。素晴らしいアプリですね。素晴らしいアプリですね。素晴らしいアプリですね。</p>
                 <footer>
                     <img src="img/self_info.png" alt="">
                     <p>会社員（32）</p>
                 </footer>
             </section>
-            <section>                
+            <section class="animation slide-from-under delay-more">                
                 <p>素晴らしいアプリですね。素晴らしいアプリですね。素晴らしいアプリですね。素晴らしいアプリですね。</p>
                 <footer>
                     <img src="img/self_info.png" alt="">
@@ -121,5 +125,10 @@
         <small>(c) footer test</small>
     </footer>
 
+    <a href="#" id="to_top">
+        <i class="bi bi-arrow-up-square-fill"></i>
+    </a>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="icon" href="img/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/owned_house.js"></script>
+    <script type="text/javascript" src="js/rent_house.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style_rent.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
+    <title>賃貸計算</title>
+</head>
+<body>
+    <!-- header erea -->
+    <header>
+        <div>
+            <a href="rent_keisan_index.html">Simulation</a>
+            <a href="#">menu2</a>
+            <a href="#">menu3</a>
+        </div>
+    </header>
+    
+    <!-- logo erea -->
+    <section class="logo">
+        <h1>賃貸計算</h1>
+        <p>将来かかる賃貸の費用をシミュレーションします</p>
+    </section>
+
+    <!-- content -->
+    <section class="content tintai">
+        <h2>- 基本情報 -</h2>
+        <div class="container">
+            <div class="doc">
+                <p>想定家賃</p>
+                <a href="#"  data-bs-toggle="modal" data-bs-target="#SB_rent_month">
+                    <img src="../img/help.png" alt="">
+                </a>
+            </div>
+            <div class="text">
+                <input type="text" name="" id="rent_month" min="0" max="100" value="10">万円
+            </div>
+        </div>
+        <div class="container">
+            <div class="doc">
+                <p>開始年齢</p>
+                <a href="#"  data-bs-toggle="modal" data-bs-target="#SB_start_age">
+                    <img src="../img/help.png" alt="">
+                </a>
+            </div>
+            <div class="text">
+                <input type="text" name="" id="start_age" value="32">歳
+            </div>
+        </div>
+        <div class="container">
+            <div class="doc">
+                <p>開始年　</p>
+                <a href="#"  data-bs-toggle="modal" data-bs-target="#SB_start_year">
+                    <img src="../img/help.png" alt="">
+                </a>
+            </div>
+            <div class="text">
+                <input type="text" name="" id="start_year" value="2022">年
+            </div>
+        </div>
+        <div class="container">
+            <div class="doc">
+                <p>計算期間</p>
+                <a href="#"  data-bs-toggle="modal" data-bs-target="#SB_limit">
+                    <img src="../img/help.png" alt="">
+                </a>
+            </div>
+            <div class="text">
+                <input type="text" name="" id="limit" value="35">年間
+            </div>
+        </div>
+
+        <h2>- 家賃補助 -</h2>
+        <div class="container">
+            <div class="doc">
+                <p>家賃補助</p>
+                <a href="#"  data-bs-toggle="modal" data-bs-target="#SB_hojo">
+                    <img src="../img/help.png" alt="">
+                </a>
+            </div>
+            <div class="text">
+                <input type="text" name="" id="hojo" min="0" max="100" value="7">万円
+            </div>
+        </div>
+        <div class="container">
+            <div class="doc">
+                <p>家賃補助<br>終了年齢</p>
+                <a href="#"  data-bs-toggle="modal" data-bs-target="#SB_hojo_end_age">
+                    <img src="../img/help.png" alt="">
+                </a>
+            </div>
+            <div class="text">
+                <input type="text" name="" id="hojo_end_age" value="40">歳
+            </div>
+        </div>
+
+        <h2>- その他 -</h2>
+        <div class="container">
+            <div class="doc">
+                <p>駐車場料<br>金</p>
+                <a href="#"  data-bs-toggle="modal" data-bs-target="#SB_parking">
+                    <img src="../img/help.png" alt="">
+                </a>
+            </div>
+            <div class="text">
+                <input type="text" name="" id="parking" min="0" max="100" value="1.5">万円
+            </div>
+        </div>
+        <div class="container">
+            <div class="doc">
+                <p>駐車料金<br>終了年齢</p>
+                <a href="#"  data-bs-toggle="modal" data-bs-target="#SB_parking_end_age">
+                    <img src="../img/help.png" alt="">
+                </a>
+            </div>
+            <div class="text">
+                <input type="text" name="" id="parking_end_age" value="40">歳
+            </div>
+        </div>
+
+        <div class="button_row">
+            <input class="btn btn-outline-primary" type="button" id="rent_house" value="賃貸計算" onclick="chart(0)">
+        </div>
+    </section>
+
+
+
+    <!-- chartjs -->
+    <div>
+        <canvas id="myChart" width="370" height="370" style="margin-left: auto;margin-right: auto;"></canvas>
+    </div>
+    <div>
+        <script type="text/javascript" src="js/chartjs.js" ></script>
+    </div>
+
+    <!-- Button trigger modal -->
+    <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        Launch static backdrop modal
+    </button> -->
+    
+    <!-- Modal -->
+    <!-- 想定家賃 -->
+    <div class="modal fade" id="SB_rent_month" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">想定家賃</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>想定の家賃を記載入力します。</p>
+                    <p>35～65歳の期間は家族が増えることを想定し、「家賃 = 想定家賃 * 1.5」で計算します。</p>
+                    <p>35歳未満、65歳以降は入力した想定家賃で計算します。</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div> 
+    </div>
+    <!-- 開始年齢 -->
+    <div class="modal fade" id="SB_start_age" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">開始年齢</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>家賃計算の開始年齢を記載します。</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div> 
+    </div>
+    <!-- 開始年 -->
+    <div class="modal fade" id="SB_start_year" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">開始年</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>家賃計算の開始年を記載します。</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div> 
+    </div>
+    <!-- 計算期間 -->
+    <div class="modal fade" id="SB_limit" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">計算期間</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>計算する期間を記載します。</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+    <!-- 家賃補助 -->
+    <div class="modal fade" id="SB_hojo" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">家賃補助</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>家賃補助がある場合、家賃補助の金額（月額）を入力します。</p>
+                    <p>家賃補助がない場合は「0」を入力します。</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div> 
+    </div>
+    <!-- 家賃補助終了年齢 -->
+    <div class="modal fade" id="SB_hojo_end_age" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">家賃補助終了年齢</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>家賃補助が終了する年齢を入力します。</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+    <!-- 駐車場料金 -->
+    <div class="modal fade" id="SB_parking" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">駐車場料金</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>月極駐車場を利用している場合、駐車場料料金（月額）を入力します。</p>
+                    <p>駐車場を利用していない場合は「0」を入力します。</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div> 
+    </div>
+    <!-- 駐車料金終了年齢 -->
+    <div class="modal fade" id="SB_parking_end_age" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">駐車料金終了年齢</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>月極駐車場の利用が終了する年齢を入力します。</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+
+    <script src="js/index.js"></script>
+</body>
+</html>
