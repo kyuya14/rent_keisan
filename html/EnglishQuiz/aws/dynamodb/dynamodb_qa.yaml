@@ -1,0 +1,30 @@
+AWSTemplateFormatVersion: '2010-09-09'
+
+# Description: 説明カラムに入る内容
+Description: "Code for DynamoDB"
+
+# Paraneters: 
+Parameters: 
+  TableName: 
+    Type: String
+    # Type: AWS::DynamoDB::Table
+    Description: "Name of DynamoDB Table"
+
+
+# Resources
+Resources:
+  DynamoDBTable: 
+    Type: AWS::DynamoDB::Table
+    Properties: 
+      AttributeDefinitions: 
+        - AttributeName: "id"  # id：パーティションキー
+          AttributeType: "N"
+        - AttributeName: "question"  # 問題文（日本語）
+          AttributeType: "S"
+        - AttributeName: "correct_anser"   # 正解（英単語）
+          AttributeType: "S"
+      KeySchema: 
+        - AttributeName: "id"  
+          KeyType: "HASH"
+
+
