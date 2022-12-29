@@ -8,9 +8,6 @@
     const scoreLabel = document.querySelector('#result > p');
 
     const quizList_1 = [
-        // { word: 'A', mean: 'A0'},
-        // { word: 'B', mean: 'B0'},
-        // { word: 'C', mean: 'C0'},
         { word: 'stimulate', mean: '刺激する'},
         { word: 'persuade', mean: '納得させる'},
         { word: 'contribute', mean: '寄与する'},
@@ -64,38 +61,74 @@
         { word: 'go so far as to do', mean: '~しさえする'},
         { word: 'provoke', mean: '挑発する'},
         { word: 'spoil', mean: '台無しにする'},
-        { word: 'fade', mean: '薄くなる、色褪せる'},    ];
+        { word: 'fade', mean: '薄くなる、色褪せる'},    
+    ];
+    const quizList_2 = [
+        { word: 'vital', mean: '極めて重要な'},
+        { word: 'moderate', mean: '適度な'},
+        { word: 'nasty', mean: '不快な、ひどい'},
+        { word: 'appropriate', mean: 'ふさわしい、適切な'},
+        { word: 'compulsory', mean: '強制的な、義務の'},
+        { word: 'rigid', mean: '厳しい'},
+        { word: 'prestigious', mean: '権威ある、名門の'},
+        { word: 'optimistic', mean: '楽観的な'},
+        { word: 'polite', mean: '礼儀正しい'},
+        { word: 'absurd', mean: 'ばかげた'},
+        { word: 'municipal', mean: '市の'},
+        { word: 'specific', mean: '具体的な'},
+        { word: 'dominant', mean: '支配的'},
+        { word: 'conservative', mean: '保守的な'},
+        { word: 'vague', mean: '曖昧な'},
+        { word: 'sensitive', mean: '敏感な'},
+        { word: 'innocent', mean: '無実の'},
+        { word: 'immense', mean: '巨大な'},
+        { word: 'noble', mean: '高潔な'},
+        { word: 'alternative', mean: '代わりの'},
+        { word: 'weird', mean: '奇妙な'},
+        { word: 'insane', mean: '狂気の、正規ではない'},
+        { word: 'reckless', mean: '無謀な'},
+        { word: 'profound', mean: '深い'},
+        { word: 'loud', mean: 'うるさい、けばけばしい'},
+        { word: 'peculiar', mean: '奇妙な'},
+        { word: 'intimate', mean: '親密な'},
+        { word: 'timid', mean: '臆病な'},
+        { word: 'miserble', mean: '惨めな'},
+        { word: 'sophisticated', mean: '洗練された'},
+        { word: 'awkward', mean: 'ぎこちない、気まずい'},
+        { word: 'indecisive', mean: '優柔不断な'},
+        { word: 'solemn', mean: '厳粛な、真面目な'},        
+    ];
 
     let quizList = [];
-    quizList_create();
+    quizList_create(quizList_1);
+    quizList_create(quizList_2);
     let quizSet = shuffle(quizList);
+    console.log(quizSet.length)
         
     let currentNum = 0;
     let isAnswered;
     let score = 0;
         
     // quizList create
-    function quizList_create() {
-        for(let i = 0; i < quizList_1.length; i++ ){
-            let correct_word = quizList_1[i].mean;   // 単語の正解
-            let another_word_1 = quizList_1[Math.floor(Math.random() * quizList_1.length)].mean  // 選択肢1
-            let another_word_2 = quizList_1[Math.floor(Math.random() * quizList_1.length)].mean  // 選択肢2
+    function quizList_create(quizList) {
+        for(let i = 0; i < quizList.length; i++ ){
+            let correct_word = quizList[i].mean;   // 単語の正解
+            let another_word_1 = quizList[Math.floor(Math.random() * quizList.length)].mean  // 選択肢1
+            let another_word_2 = quizList[Math.floor(Math.random() * quizList.length)].mean  // 選択肢2
             if(correct_word === another_word_1) {  //選択肢1 === 選択肢2なら
-                another_word_1 = quizList_1[Math.floor(Math.random() * quizList_1.length)].mean
+                another_word_1 = quizList[Math.floor(Math.random() * quizList.length)].mean
             }
             if(another_word_1 === another_word_2) {  //選択肢1 === 選択肢2なら
-                another_word_2 = quizList_1[Math.floor(Math.random() * quizList_1.length)].mean
+                another_word_2 = quizList[Math.floor(Math.random() * quizList.length)].mean
             }
             if(correct_word === another_word_2) {  //選択肢1 === 選択肢2なら
-                another_word_2 = quizList_1[Math.floor(Math.random() * quizList_1.length)].mean
+                another_word_2 = quizList[Math.floor(Math.random() * quizList.length)].mean
             }
             let quizList_obj = {
-                q: `'What is ${quizList_1[i].word} ? '`,
+                q: `'What is ${quizList[i].word} ? '`,
                 c: [`${correct_word}`,`${another_word_1}`,`${another_word_2}`]
             }
             quizList.push(quizList_obj);
-            // quizList.push(`{q: 'What is ${quizList_1[i].word} ? ', c: ['${correct_word}','${another_word_1}','${another_word_2}']}`)
-            // quizList.push(`{q: 'What is ${quizList_1[0].word} ? ', c: [' ${quizList_1[0].mean}','${quizList_1[Math.floor(Math.random() * quizList_1.length)].mean}','${quizList_1[2].mean}']}`)
                 
         }
     }
