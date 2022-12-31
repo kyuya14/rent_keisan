@@ -98,34 +98,79 @@
         { word: 'indecisive', mean: '優柔不断な'},
         { word: 'solemn', mean: '厳粛な、真面目な'},        
     ];
+    const quizList_3 = [
+        { word: 'nutrition', mean: '栄養摂取'},
+        { word: 'infant', mean: '幼児'},
+        { word: 'surgeon', mean: '外科医'},
+        { word: 'hypothesis', mean: '仮説'},
+        { word: 'military', mean: '軍隊'},
+        { word: 'discipline', mean: '規律'},
+        { word: 'adversity', mean: '逆境'},
+        { word: 'temptation', mean: '誘惑'},
+        { word: 'insult', mean: '侮辱'},
+        { word: 'loyalty', mean: '忠誠心'},
+        { word: 'council', mean: '議会'},
+        { word: 'politician', mean: '政治家'},
+        { word: 'hypocrisy', mean: '偽善'},
+        { word: 'dignity', mean: '尊厳'},
+        { word: 'criticism', mean: '批判'},
+        { word: 'addict', mean: '中毒者'},
+        { word: 'reputation', mean: '評判'},
+        { word: 'ally', mean: '同盟国'},
+        { word: 'invansion', mean: '侵略'},
+        { word: 'violation', mean: '違反'},
+        { word: 'resolution', mean: '決議'},
+        { word: 'honor', mean: '名誉'},
+        { word: 'tariff', mean: '関税'},
+        { word: 'sanction', mean: '制裁'},
+        { word: 'source', mean: '源'},
+        { word: 'revenue', mean: '歳入'},
+        { word: 'wilderness', mean: '原野'},
+        { word: 'vice', mean: '悪いこと'},
+        { word: 'virtue', mean: '正しいこと'},
+        { word: 'cargo', mean: '貨物'},
+        { word: 'vessel', mean: '船舶'},
+        { word: 'tragedy', mean: '惨事'},
+        { word: 'civilization', mean: '文明'},
+        { word: 'linguist', mean: '言語学者'},
+        { word: 'dialect', mean: '方言'},
+        { word: 'ancestor', mean: '先祖'},
+        { word: 'province', mean: '州'},
+        { word: 'acquaintance', mean: '知人'},
+        { word: 'adolescence', mean: '思春期'},
+        { word: 'torture', mean: '拷問'},
+        { word: 'arrogance', mean: '傲慢さ'},
+        { word: 'atmosphere', mean: '雰囲気'},
+        { word: 'grief', mean: '悲しみ'},        
+    ]
 
     let quizList = [];
     quizList_create(quizList_1);
     quizList_create(quizList_2);
+    quizList_create(quizList_3);
     let quizSet = shuffle(quizList);
-    console.log(quizSet.length)
         
     let currentNum = 0;
     let isAnswered;
     let score = 0;
         
     // quizList create
-    function quizList_create(quizList) {
-        for(let i = 0; i < quizList.length; i++ ){
-            let correct_word = quizList[i].mean;   // 単語の正解
-            let another_word_1 = quizList[Math.floor(Math.random() * quizList.length)].mean  // 選択肢1
-            let another_word_2 = quizList[Math.floor(Math.random() * quizList.length)].mean  // 選択肢2
-            if(correct_word === another_word_1) {  //選択肢1 === 選択肢2なら
-                another_word_1 = quizList[Math.floor(Math.random() * quizList.length)].mean
+    function quizList_create(quizListSet) {
+        for(let i = 0; i < quizListSet.length; i++ ){
+            let correct_word = quizListSet[i].mean;   // 単語の正解
+            let another_word_1 = quizListSet[Math.floor(Math.random() * quizListSet.length)].mean  // 選択肢1を選択肢からランダムに選択
+            let another_word_2 = quizListSet[Math.floor(Math.random() * quizListSet.length)].mean  // 選択肢2を選択肢からランダムに選択
+            if(correct_word === another_word_1) {  //正解 === 選択肢1なら
+                another_word_1 = quizListSet[Math.floor(Math.random() * quizListSet.length)].mean
             }
             if(another_word_1 === another_word_2) {  //選択肢1 === 選択肢2なら
-                another_word_2 = quizList[Math.floor(Math.random() * quizList.length)].mean
+                another_word_2 = quizListSet[Math.floor(Math.random() * quizListSet.length)].mean
             }
-            if(correct_word === another_word_2) {  //選択肢1 === 選択肢2なら
-                another_word_2 = quizList[Math.floor(Math.random() * quizList.length)].mean
+            if(correct_word === another_word_2) {  //正解 === 選択肢2なら
+                another_word_2 = quizListSet[Math.floor(Math.random() * quizListSet.length)].mean
             }
             let quizList_obj = {
-                q: `'What is ${quizList[i].word} ? '`,
+                q: `'What is ${quizListSet[i].word} ? '`,
                 c: [`${correct_word}`,`${another_word_1}`,`${another_word_2}`]
             }
             quizList.push(quizList_obj);
