@@ -4,6 +4,7 @@
     const question = document.getElementById('question');
     const choices = document.getElementById('choices');
     const btn = document.getElementById('btn');
+    const choices_btn = document.getElementById('choices_btn');
     const result = document.getElementById('result');
     const scoreLabel = document.querySelector('#result > p');
 
@@ -189,16 +190,16 @@
     
     
     function setQuiz() {
-
         while(choices.firstChild) {             
             choices.removeChild(choices.firstChild);     // li要素をここで一旦全て削除
         }
 
-
+        // 問題文をセット
         isAnswered = false;
         question.textContent = quizSet[currentNum].q;    // 問題分をセット
         const shuffledChoices = shuffle([...quizSet[currentNum].c]);   //
     
+        // 選択肢をセット
         shuffledChoices.forEach(choice => { 
             const li = document.createElement('li');
             li.textContent = choice;                       // li要素を追加
@@ -243,6 +244,13 @@
             setQuiz();
             btn.classList.add('disable');
         }
+        choices_btn.classList.remove('hidden');  // 選択肢表示ボタンを表示する
+        choices.classList.add('hidden');  // 選択肢を隠す
+    });
+
+    choices_btn.addEventListener('click', () => {
+        choices_btn.classList.add('hidden');  // 選択肢表示ボタンを隠す
+        choices.classList.remove('hidden');  // 選択肢を表示する
     });
 
 }
