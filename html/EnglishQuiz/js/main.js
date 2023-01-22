@@ -62,7 +62,7 @@
         { word: 'go so far as to do', mean: '~しさえする'},
         { word: 'provoke', mean: '挑発する'},
         { word: 'spoil', mean: '台無しにする'},
-        { word: 'fade', mean: '薄くなる、色褪せる'},  
+        { word: 'fade', mean: '薄くなる、色褪せる'},   
         { word: 'stink', mean: '臭い'},
         { word: 'anticipate', mean: '予期する'},
         { word: 'expose', mean: 'さらす'},
@@ -79,7 +79,7 @@
         { word: 'abandan', mean: '見捨てる'},
         { word: 'abuse', mean: '乱用する'},
         { word: 'bully', mean: 'いじめる'},
-        { word: 'frown', mean: '顔をしかめる'},  
+        { word: 'frown', mean: '顔をしかめる'}, 
     ];
     const quizList_2 = [
         { word: 'vital', mean: '極めて重要な'},
@@ -125,7 +125,7 @@
         { word: 'ingenious', mean: '独創的な'},
         { word: 'flammable', mean: '可燃性の'},
         { word: 'desperate', mean: '必死の、絶望的な'},
-        { word: 'hostile', mean: '敵対的な'},       
+        { word: 'hostile', mean: '敵対的な'},             
     ];
     const quizList_3 = [
         { word: 'nutrition', mean: '栄養摂取'},
@@ -194,7 +194,7 @@
         { word: 'disarmament', mean: '軍事縮小'},
         { word: 'aristocrat', mean: '貴族'},
         { word: 'privilege', mean: '特権'},
-        { word: 'compliment', mean: '褒め言葉'},       
+        { word: 'compliment', mean: '褒め言葉'},    
     ]
 
     let quizList = [];
@@ -267,8 +267,7 @@
     };
 
     function checkAnser(li) {                          // 回答後の挙動を記載
-        btn.classList.remove('disable');
-
+        
         if(isAnswered) {
             return;
         }
@@ -276,8 +275,12 @@
         if(li.textContent === quizSet[currentNum].c[0]) {
             li.classList.add('correct');
             score++;
+            btn.classList.remove('disable');
         }else {
             li.classList.add('wrong');
+            sleep(5, function () {
+                btn.classList.remove('disable');             
+            });
         }
     };
 
@@ -305,4 +308,24 @@
         choices.classList.remove('hidden');  // 選択肢を表示する
     });
 
+    // sleep関数を定義
+    function sleep(waitSec, callbackFunc) {
+        // 経過時間（秒）
+        var spanedSec = 0;     
+        // 1秒間隔で無名関数を実行
+        var id = setInterval(function () {
+     
+            spanedSec++;
+     
+            // 経過時間 >= 待機時間の場合、待機終了。
+            if (spanedSec >= waitSec) {
+     
+                // タイマー停止
+                clearInterval(id);
+     
+                // 完了時、コールバック関数を実行
+                if (callbackFunc) callbackFunc();
+            }
+        }, 1000);
+    }
 }
