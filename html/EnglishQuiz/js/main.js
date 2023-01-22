@@ -299,7 +299,10 @@
             setQuiz();
             btn.classList.add('disable');
         }
-        choices_btn.classList.remove('hidden');  // 選択肢表示ボタンを表示する
+        sleep(3, function () {
+            choices_btn.classList.remove('hidden');  // 選択肢表示ボタンを表示する
+        });
+
         choices.classList.add('hidden');  // 選択肢を隠す
     });
 
