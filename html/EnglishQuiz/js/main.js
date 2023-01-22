@@ -194,7 +194,8 @@
         { word: 'disarmament', mean: '軍事縮小'},
         { word: 'aristocrat', mean: '貴族'},
         { word: 'privilege', mean: '特権'},
-        { word: 'compliment', mean: '褒め言葉'},    ]
+        { word: 'compliment', mean: '褒め言葉'},    
+    ]
 
     let quizList = [];
     quizList_create(quizList_1);
